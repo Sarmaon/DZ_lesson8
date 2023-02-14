@@ -30,26 +30,26 @@ void PrintArray(int[,] array)
     }
 }
 
-int[,] HorizSortArray(int[,] Array)
+int[,] HorizSortArray(int[,] arraySecond)
 {
     int tempMax;
 
-    for (int i = 0; i < Array.GetLength(0); i++)
+    for (int i = 0; i < arraySecond.GetLength(0); i++)
     {
-        for (int j = 0; j < Array.GetLength(1) - 1; j++)
+        for (int j = 0; j < arraySecond.GetLength(1) - 1; j++)
         {
-            for (int k = 0; k < Array.GetLength(1) - 1 - j; k++)
+            for (int k = 0; k < arraySecond.GetLength(1) - 1 - j; k++)
             {
-                if (Array[i, k] < Array[i, k + 1])
+                if (arraySecond[i, k] < arraySecond[i, k + 1])
                 {
-                    tempMax = Array[i, k];
-                    Array[i, k] = Array[i, k + 1];
-                    Array[i, k + 1] = tempMax;
+                    tempMax = arraySecond[i, k];
+                    arraySecond[i, k] = arraySecond[i, k + 1];
+                    arraySecond[i, k + 1] = tempMax;
                 }
             }
         }
     }
-    return Array;
+    return arraySecond;
 }
 
 
